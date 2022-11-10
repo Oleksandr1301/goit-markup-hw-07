@@ -1,0 +1,35 @@
+.qualities-list {
+  display: flex;
+  gap: 30px;
+}
+
+.qualities-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.qualities-item div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.qualities-logo {
+  fill: #212121;
+}
+
+.qualities-titles {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.qualities-text {
+  line-height: 1.71;
+  color: var(--p-color-index);
+}

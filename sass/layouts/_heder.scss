@@ -1,0 +1,111 @@
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.logo-web {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--logo-button-contact-color);
+}
+.logo-studio {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--text-color);
+}
+.header-list-nav {
+  display: flex;
+  margin-left: 93px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+  gap: 50px;
+}
+
+
+/* Контакти хедера */
+
+.header-list-contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-list-contact li + li {
+  margin-left: 50px;
+}
+
+.header-list-contact li {
+  display: inline-block;
+  align-items: center;
+}
+
+.email,
+.contact-phone-number {
+  display: flex;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heder-icon-mail,
+.heder-icon-phon {
+  margin-right: 10px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-phone-number:hover .heder-icon-phon,
+.contact-phone-number:focus .heder-icon-phon,
+.email:hover .heder-icon-mail,
+.email:focus .heder-icon-mail {
+  fill: var(--logo-button-contact-color);
+}
+
+.nav-list,
+.email,
+.contact-phone-number {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.14;
+}
+.email,
+.contact-phone-number {
+  color: var(--p-color-index);
+}
+.nav-list {
+  color: var(--text-color);
+}
+
+/* Активна сторінка навігації */
+
+.nav-list {
+  height: 100%;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-activ {
+  color: var(--logo-button-contact-color);
+  position: relative;
+}
+
+.list-activ::after {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--logo-button-contact-color);
+}
