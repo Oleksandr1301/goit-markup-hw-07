@@ -29,4 +29,23 @@ a {
 
 address {
   font-style: normal;
+}
+
+:root {
+  --logo-button-contact-color: #2196f3;
+  --p-color-index: #757575;
+  --text-color: #212121;
+  --text-color-button-hover: #ffffff;
+  --background-color-button: #f5f4fa;
+  --section-slogan-color: #c4c4c4;
+  --fon: #f5f5f5;
+  --color-futer: rgba(255, 255, 255, 0.6);
+  --comand-soc-icon: #afb1b8;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
