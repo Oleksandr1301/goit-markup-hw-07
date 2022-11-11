@@ -109,3 +109,12 @@ nav {
   border-radius: 2px;
   background: var(--logo-button-contact-color);
 }
+
+.contact-phone-number:hover,
+.contact-phone-number:focus,
+.email:hover,
+.email:focus,
+.nav-list:hover,
+.nav-list:focus {
+  color: var(--logo-button-contact-color);
+}
