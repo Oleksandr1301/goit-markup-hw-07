@@ -542,17 +542,20 @@ nav .nav-link {
 .work {
   padding-top: 0px;
 }
-.work .work-list {
+
+.type-work {
   display: flex;
   gap: 30px;
 }
-.work .work-item {
+.type-work .type-work__item {
   width: calc((100% - 60px) / 3);
 }
-.work .work-item-section {
+
+.applications {
   position: relative;
 }
-.work .work-item-text {
+
+.applications__text {
   position: absolute;
   bottom: 0;
   height: 70px;
