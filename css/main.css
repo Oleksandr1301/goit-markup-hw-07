@@ -45,22 +45,6 @@ body {
   padding-bottom: 94px;
 }
 
-.subscription-submit, .studio-button, .modal-submit {
-  background-color: var(--logo-button-contact-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--text-color-button-hover);
-  border: none;
-  cursor: pointer;
-}
-
 :root {
   --logo-button-contact-color: #2196f3;
   --p-color-index: #757575;
@@ -85,6 +69,22 @@ body {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   margin: -1px;
+}
+
+.subscription-submit, .studio-button, .modal-submit {
+  background-color: var(--logo-button-contact-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text-color-button-hover);
+  border: none;
+  cursor: pointer;
 }
 
 .logo .logo-studio, .logo, nav .logo .logo-studio, nav .logo {
@@ -414,14 +414,14 @@ nav .nav-link {
   color: var(--text-color);
 }
 
-.qualities-list {
+.qualities {
   display: flex;
   gap: 30px;
 }
-.qualities-list .qualities-item {
+.qualities .qualities__item {
   width: calc((100% - 90px) / 4);
 }
-.qualities-list .qualities-item div {
+.qualities .qualities__item div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,13 +431,13 @@ nav .nav-link {
   background-color: #f5f4fa;
   margin-bottom: 30px;
 }
-.qualities-list .qualities-titles {
+.qualities .qualities__titles {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.qualities-list .qualities-text {
+.qualities .qualities__text {
   line-height: 1.71;
   color: var(--p-color-index);
 }
