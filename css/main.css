@@ -45,7 +45,7 @@ body {
   padding-bottom: 94px;
 }
 
-.subscription-submit, .modal-submit {
+.subscription-submit, .studio-button, .modal-submit {
   background-color: var(--logo-button-contact-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -58,12 +58,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--text-color-button-hover);
   border: none;
-  margin-left: 12px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscription-submit:hover, .modal-submit:hover, .subscription-submit:focus, .modal-submit:focus {
-  background-color: #188ce8;
 }
 
 :root {
@@ -90,6 +85,16 @@ body {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   margin: -1px;
+}
+
+.logo .logo-studio, .logo, nav .logo .logo-studio, nav .logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-button-contact-color);
 }
 
 .container {
@@ -187,6 +192,10 @@ body {
 .modal-submit {
   padding: 10px 52px;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-submit:hover, .modal-submit:focus {
+  background-color: #188ce8;
 }
 
 .input-wrap {
@@ -305,18 +314,10 @@ nav {
   display: flex;
   align-items: center;
 }
-nav .logo-web {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--logo-button-contact-color);
+nav .logo {
+  display: inline-block;
 }
-nav .logo-studio {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+nav .logo .logo-studio {
   color: var(--text-color);
 }
 nav .nav-list {
@@ -399,21 +400,12 @@ nav .nav-link {
   margin-left: auto;
   margin-right: auto;
   width: 696px;
+  margin-bottom: 30px;
 }
 
 .studio-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  background-color: var(--logo-button-contact-color);
-  cursor: pointer;
-  color: var(--text-color-button-hover);
-  margin-top: 30px;
   padding: 10px 32px;
-  border: none;
+  margin: 0 auto;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .studio-button:hover {
@@ -597,23 +589,11 @@ nav .nav-link {
 }
 
 /* Логотип футера*/
-.logo-web-footer,
-.logo-studio-footer {
+.logo {
   display: inline-block;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
-
-.logo-studio-footer {
+.logo .logo-studio {
   color: var(--text-color-button-hover);
-}
-
-.logo-web-footer {
-  color: var(--logo-button-contact-color);
 }
 
 /* Контакти */
@@ -711,7 +691,12 @@ nav .nav-link {
 }
 
 .subscription-submit {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 10px 28px;
+  margin-left: 12px;
+}
+.subscription-submit:hover, .subscription-submit:focus {
+  background-color: #188ce8;
 }
 
 .subscription-icon {

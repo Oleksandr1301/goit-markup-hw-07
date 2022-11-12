@@ -79,9 +79,15 @@
 
 .modal-submit {
   @extend %button;
+  padding: 10px 52px;
+  margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-padding: 10px 52px;
-margin: 0 auto;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+  
 }
 
 .input-wrap {
