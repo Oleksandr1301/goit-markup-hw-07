@@ -2,12 +2,12 @@
   background-color: var(--background-color-button);
 }
 
-.command-member {
+.command-list {
   display: flex;
   gap: 30px;
 }
 
-.member {
+.command-item {
   background-color: var(--text-color-button-hover);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -52,21 +52,19 @@
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
 }
 
-.comand-soc-link:hover,
-.comand-soc-link:focus,
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: #2196f3;
-}
-
-.comand-soc-link:hover .comand-soc-icon,
-.comand-soc-link:focus .comand-soc-icon {
-  fill: #ffffff;
-}
-.comand-soc-icon,
-.clients-logo {
+.comand-soc-icon {
   fill: var(--comand-soc-icon);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .comand-soc-link:hover &,
+  .comand-soc-link:focus & {
+    fill: #ffffff;
+  }
 }

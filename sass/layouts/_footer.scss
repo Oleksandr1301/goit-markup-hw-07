@@ -11,6 +11,10 @@
 .address {
   font-style: normal;
   margin-top: 20px;
+  
+& li + li {
+  margin-top: 9px;
+}
 }
 
 /* Логотип футера*/
@@ -36,9 +40,7 @@
 
 /* Контакти */
 
-.address li + li {
-  margin-top: 9px;
-}
+
 
 .contact-phone-number-footer,
 .email-footer {
@@ -69,9 +71,6 @@
   margin-bottom: 20px;
 }
 
-/* .footer-soc {
-  margin-left: 70px;
-} */
 .footer-soc-list {
   display: flex;
   justify-content: center;
@@ -92,6 +91,10 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
 }
 
 .footer-soc-icon {
@@ -99,10 +102,6 @@
 }
 
 /* footer Приєднуйтесь */
-
-/* .subscription {
-  margin-left: 93px;
-} */
 
 .subscription-form {
   display: flex;
@@ -117,19 +116,18 @@
   padding-left: 16px;
   outline: transparent;
   color: var(--text-color-button-hover);
-  background-color: #2F303A;
+  background-color: #2f303a;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+  &:focus {
+    border-color: var(--logo-button-contact-color);
+  }
 
-.subscription-input:focus {
-  border-color: var(--logo-button-contact-color);
-}
-
-.subscription-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-line-height: 1.25;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .subscription-submit {
@@ -151,13 +149,15 @@ line-height: 1.25;
   margin-left: 12px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+&:focus {
+  background-color: #188ce8;
+}
 }
 
 .subscription-icon {
   margin-left: 10px;
 }
 
-.subscription-submit:hover,
-.subscription-submit:focus {
-  background-color: #188ce8;
-}
+
