@@ -266,10 +266,32 @@ body {
           text-decoration-line: underline;
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
+.list-activ {
+  color: var(--logo-button-contact-color);
+  position: relative;
+}
+.list-activ::after {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--logo-button-contact-color);
 }
 
+.button-list .portfolio-button-all {
+  background-color: var(--logo-button-contact-color);
+  color: var(--text-color-button-hover);
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.14;
+  border-bottom: 1px solid #ececec;
+}
 .header .container {
   display: flex;
   align-items: center;
@@ -279,30 +301,33 @@ nav {
   display: flex;
   align-items: center;
 }
-
-.logo-web {
+nav .logo-web {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--logo-button-contact-color);
 }
-
-.logo-studio {
+nav .logo-studio {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--text-color);
 }
-
-.nav-list {
+nav .nav-list {
   display: flex;
   margin-left: 93px;
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
   gap: 50px;
+}
+nav .nav-link {
+  height: 100%;
+  display: block;
+  color: var(--text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Контакти хедера */
@@ -322,6 +347,7 @@ nav {
 .contact-phone-number {
   display: flex;
   align-items: center;
+  color: var(--p-color-index);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -336,43 +362,6 @@ nav {
 .email:hover .heder-icon-mail,
 .email:focus .heder-icon-mail {
   fill: var(--logo-button-contact-color);
-}
-
-.nav-list,
-.email,
-.contact-phone-number {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  line-height: 1.14;
-}
-
-.email,
-.contact-phone-number {
-  color: var(--p-color-index);
-}
-
-/* Активна сторінка навігації */
-.nav-link {
-  height: 100%;
-  display: block;
-  color: var(--text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.list-activ {
-  color: var(--logo-button-contact-color);
-  position: relative;
-}
-
-.list-activ::after {
-  content: "";
-  position: absolute;
-  bottom: -32px;
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--logo-button-contact-color);
 }
 
 .contact-phone-number:hover,
@@ -423,7 +412,6 @@ nav {
   border: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .studio-button:hover {
   box-shadow: 0 0 12px 3px var(--p-color-index);
   transform: scale(1.1);
@@ -434,12 +422,10 @@ nav {
   display: flex;
   gap: 30px;
 }
-
-.qualities-item {
+.qualities-list .qualities-item {
   width: calc((100% - 90px) / 4);
 }
-
-.qualities-item div {
+.qualities-list .qualities-item div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -449,19 +435,13 @@ nav {
   background-color: #f5f4fa;
   margin-bottom: 30px;
 }
-
-.qualities-logo {
-  fill: #212121;
-}
-
-.qualities-titles {
+.qualities-list .qualities-titles {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
-.qualities-text {
+.qualities-list .qualities-text {
   line-height: 1.71;
   color: var(--p-color-index);
 }
@@ -566,21 +546,17 @@ nav {
 .work {
   padding-top: 0px;
 }
-
-.work-list {
+.work .work-list {
   display: flex;
   gap: 30px;
 }
-
-.work-item {
+.work .work-item {
   width: calc((100% - 60px) / 3);
 }
-
-.work-item-section {
+.work .work-item-section {
   position: relative;
 }
-
-.work-item-text {
+.work .work-item-text {
   position: absolute;
   bottom: 0;
   height: 70px;
@@ -760,10 +736,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.button-list .button-item + .button-item {
-  margin-left: 8px;
+  gap: 8px;
 }
 
 .portfolio-button {
@@ -779,16 +752,8 @@ nav {
   border: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio-button:hover, .portfolio-button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  background-color: var(--logo-button-contact-color);
-  color: var(--text-color-button-hover);
-}
-
-/* Активна кнопка порфоліо */
-.portfolio-button-all {
   background-color: var(--logo-button-contact-color);
   color: var(--text-color-button-hover);
 }
@@ -813,9 +778,7 @@ nav {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.project-link:hover,
-.project-link:focus {
+.project-link:hover, .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -832,11 +795,6 @@ nav {
   margin-top: 4px;
 }
 
-.project-link:hover .project-top-text,
-.project-link:focus .project-top-text {
-  transform: translateY(0);
-}
-
 .project-top-wrap {
   position: relative;
   overflow: hidden;
@@ -851,6 +809,9 @@ nav {
   width: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-link:hover .project-top-text, .project-link:focus .project-top-text {
+  transform: translateY(0);
 }
 
 .project-top-text-p {
