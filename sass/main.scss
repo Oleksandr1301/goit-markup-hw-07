@@ -1,16 +1,15 @@
-@import './base/reset';
-@import './base/common';
-
-
 @import './utils/vars';
 @import './utils/hidden';
 @import './utils/placeholders';
 
-@import './components/container';
+@import './base/reset';
+@import './base/common';
+
 @import './components/title';
 @import './components/backdrop';
 @import './components/list-activ';
 @import './components/button-activ';
+@import './components/section';
 
 @import './layouts/heder';
 @import './layouts/hero';
@@ -20,5 +19,6 @@
 @import './layouts/work';
 @import './layouts/footer';
 
-@import './project/portfolio-buttons';
-@import './project/projects';
+@import './pages/portfolio-buttons';
+@import './pages/projects';
+
